@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="soundBoxesContainer">
+        <div class="soundBox">
+                <audio class="sounds" src="./sounds/boom.wav" data-code="113"></audio>
+                <span class="assignedButton">q</span>
+                <span class="sBtn btnRe" style="display: none;">Reassign</span>
+            </div>
+
+        <div class="soundBox">
+                <audio class="sounds" src="./sounds/clap.wav" data-code="119"></audio>
+                <span class="assignedButton">w</span>
+                <span class="sBtn btnRe" style="display: none;">Reassign</span>
+            </div>
+
+        <div class="soundBox">
+                <audio class="sounds" src="./sounds/hihat.wav" data-code="101"></audio>
+                <span class="assignedButton">e</span>
+                <span class="sBtn btnRe" style="display: none;">Reassign</span>
+            </div>
+            
+        <div class="soundBox">
+                <audio class="sounds" src="./sounds/kick.wav" data-code="114"></audio>
+                <span class="assignedButton">r</span>
+                <span class="sBtn btnRe" style="display: none;">Reassign</span>
+            </div>
+
+        <div class="soundBox">
+            <audio class="sounds" src="./sounds/openhat.wav" data-code="116"></audio>
+            <span class="assignedButton">t</span>
+            <span class="sBtn btnRe" style="display: none;">Reassign</span>
+        </div>
+
+        <div class="soundBox">
+                <audio class="sounds" src="./sounds/ride.wav" data-code="97"></audio>
+                <span class="assignedButton">a</span>
+                <span class="sBtn btnRe" style="display: none;">Reassign</span>
+            </div>
+
+        <div class="soundBox">
+            <audio class="sounds" src="./sounds/tom.wav" data-code="115"></audio>
+            <span class="assignedButton">s</span>
+                <span class="sBtn btnRe" style="display: none;">Reassign</span>
+            </div>
+
+        <div class="soundBox">
+            <audio class="sounds" src="./sounds/snare.wav" data-code="100"></audio>
+            <span class="assignedButton">d</span>
+                <span class="sBtn btnRe" style="display: none;">Reassign</span>
+            </div>
+
+        <div class="soundBox">
+            <audio class="sounds" src="./sounds/tink.wav" data-code="102"></audio>
+            <span class="assignedButton">f</span>
+                <span class="sBtn btnRe" style="display: none;">Reassign</span>
+        </div>
+
+        <div class="soundBox">
+        <audio class="sounds" src="./sounds/pickle_rick.mp3" data-code="122"></audio>
+        <span class="assignedButton">z</span>
+            <span class="sBtn btnRe" style="display: none;">Reassign</span>
+        </div>
+
+        <div class="soundBox">
+            <audio class="sounds" src="./sounds/my-man.mp3" data-code="120"></audio>
+            <span class="assignedButton">x</span>
+            <span class="sBtn btnRe" style="display: none;">Reassign</span>
+        </div>            
+    </div>
+
+    <div id="buttonsHolder">
+        <div id="ss">
+            <div id="playSel" class="mBtn">Play selected</div>
+            <div id="stopSel" class="mBtn">Stop selected</div>
+        </div>
+        <div id="showReBtns" class="mBtn">Reassign buttons</div>
+        <div id="addNewTrack" class="mBtn">Add new Track</div>
+    </div>
+
+    <div id="trackBoxesContainer">
+        <div class="trackBox" data-trackId="0">
+            <div class="trackPlay tBtn">Play</div>
+            <div class="trackRecord tBtn">Record</div>
+            <div class="trackRepeat tBtn">Repeat</div>
+            <div class="trackSelect tBtn">Select</div>
+            <div class="trackReset tBtn">Reset</div>
+            <div class="trackHolder">
+                <div class="track">
+                    <div class="pointer" style="left: 0px"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trackBox" data-trackId="1">
+            <div class="trackPlay tBtn">Play</div>
+            <div class="trackRecord tBtn">Record</div>
+            <div class="trackRepeat tBtn">Repeat</div>
+            <div class="trackSelect tBtn">Select</div>
+            <div class="trackReset tBtn">Reset</div>
+            <div class="trackHolder">
+                <div class="track">
+                    <div class="pointer" style="left: 0px"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trackBox" data-trackId="2">
+            <div class="trackPlay tBtn">Play</div>
+            <div class="trackRecord tBtn">Record</div>
+            <div class="trackRepeat tBtn">Repeat</div>
+            <div class="trackSelect tBtn">Select</div>
+            <div class="trackReset tBtn">Reset</div>
+            <div class="trackHolder">
+                <div class="track">
+                    <div class="pointer" style="left: 0px"></div>
+                </div>
+            </div>
+        </div>        
+    </div><!-- end of #trackBoxesContainer -->
+    
+    
+    <div id="dimness">
+        <div id="btnReassignWindow">Hit button to assign</div>
+    </div> 
+
+    <script src="script.js"></script>
+    <script src="buttons.js"></script>
+</body>
+</html>

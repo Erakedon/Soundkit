@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body
+{
+    font-size: 15px;
+    background: radial-gradient(rgb(0, 84, 87),rgb(0, 44, 44));
+    font-family: 'Montserrat', sans-serif;
+}
+
+#soundBoxesContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+
+    margin: 3vw;
+    padding: 2vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    margin-top: 6vw;
+}
+
+.soundBox
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    width: 110px;
+    height: 110px;
+
+    max-width: 15vw;
+    max-height: 15vw;  
+
+    border-radius: 100px;
+    margin: 1.7vw;    
+    border: solid 5px #09ABB3;
+    
+    z-index: 10;
+    cursor: pointer;
+}
+
+.soundBox:hover
+{    
+    transform: scale(1.04);
+}
+
+.soundBox:active
+{
+    transform: scale(1.1);
+}
+
+.assignedButton
+{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+    color: rgb(123, 203, 206);
+    font-size: 2.2em;
+}
+
+.wave
+{
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    
+    border-radius: 50%;
+    
+    border: solid 7px rgb(66, 249, 255);
+    z-index: 5;  
+    
+    animation-name: sBWave;
+    animation-duration: 0.5s;
+    
+    animation-iteration-count: 1;
+}
+
+@keyframes sBWave
+{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+.btnRe
+{
+    position: static;
+
+    border: solid 2px rgb(123, 203, 206);
+    color: #A7EAED;
+        
+    border-radius: 100%;
+    font-size: 0.8em;
+    
+    padding: 7px;
+    margin: 1px;
+}
+
+.sBtn:hover
+{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#trackBoxesContainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trackBox
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    width: 90%;
+    height: auto;  
+    background-color: rgba(0, 108, 112, 0.5);
+
+    border-radius: 0% 0% 12% 12%;   
+    box-shadow: 0px 2px 15px rgb(0, 35, 36);
+
+    padding: 1.5vw;
+    padding-bottom: 2.5vw;
+    margin: 1vw;
+    
+}
+
+.track
+{
+    position: relative;    
+    background-color: rgb(0, 54, 56);    
+    height: 130px;
+    margin: 1vw;
+    overflow-x: hidden;
+    border: solid 0.5px rgb(0, 35, 36);
+}
+
+.trackHolder
+{    
+    justify-self: center;
+    align-self: center;
+    position: static;
+    height: 90%;
+    width: 100%;
+}
+
+.soundPiece
+{
+    position: absolute;
+
+    height: 80%;
+    background-color: #09ABB3;
+    z-index: 10;
+
+    transition: ease-in-out 0.2s;
+    box-shadow: 1px 1px 1px rgb(0, 35, 36);
+}
+
+.soundPiece.playing
+{
+    background-color: rgb(66, 249, 255);    
+    z-index: 20;    
+    transform: scale(1.07);
+    transition: 0.1;
+}
+
+.trackBox, .soundBox
+{
+    margin-top: 20px;
+}
+
+.tBtn
+{
+    display: inline-block;
+    color: rgb(55, 212, 214);    
+    padding: 5px;
+    margin: 4px;
+    margin-left: 10px;
+    border: solid 2px rgb(55, 212, 214);
+    border-radius: 30%;
+    box-shadow: 0.5px 2px rgb(21, 85, 85);
+}
+
+.tBtn:hover
+{ 
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+
+.tBtn.active:hover
+{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#buttonsHolder
+{
+    display: flex;
+    justify-content: space-around;
+    margin: 2vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+.mBtn
+{
+    color: rgb(55, 212, 214);
+    
+    padding: 15px;
+    border: solid 2px rgb(55, 212, 214);
+    border-radius: 30%;
+    
+    box-shadow: 1px 2px 5px rgb(17, 66, 66);
+}
+
+.mBtn:hover
+{
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.tBtn.active, .tBtn:active, .mBtn.active, .mBtn:active
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    
+    border: solid 2px rgb(132, 212, 212);
+    color: rgb(132, 212, 212);    
+    box-shadow: -0.5px -2px rgb(61, 99, 99);
+    transform: translate(0.25px, 1px);
+}
+
+#ss
+{
+    display: flex;
+}
+
+#playSel
+{
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    margin-right: 4px;
+}
+
+#stopSel
+{
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+}
+
+.pointer
+{
+    position: relative;
+    width: 3px;
+    height: 11px;
+    background-color: white;
+    z-index: 5;
+}
+
+#dimness
+{
+    visibility: hidden;
+    z-index: 10000;
+
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#dimness.active
+{
+    visibility: visible;
+}
+
+#btnReassignWindow
+{    
+    z-index: 10001;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-self: center;
+    width: 300px;
+    height: 200px;
+
+    color: white;
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px black;
+}
+
+@media (max-width: 1200px)
+{
+    .soundBox
+    {
+        width: 100px;
+        height: 100px;
+        margin: 1.8vw;
+    }
+
+    .mBtn
+    {
+        padding: 13px;
+    }
+}
+
+@media (max-width: 950px)
+{
+    .soundBox
+    {
+        width: 110px;
+        height: 110px;
+        margin: 3vw;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .btnRe
+    {
+        font-size: 2vw;
+        margin-bottom: 10%;
+    }
+
+    .assignedButton
+    {
+        font-size: 1.9em;
+    }
+
+    .soundBox
+    {
+        width: 90px;
+        height: 90px;
+        margin: 2vw;
+
+        border-width: 3px;
+    }
+
+    #buttonsHolder
+    {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .mBtn
+    {
+        margin: 4px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 450px)
+{
+    .assignedButton
+    {
+        font-size: 1.5em;
+    }
+
+    .soundBox
+    {
+        width: 90px;
+        height: 90px;
+        margin: 3.5vw;
+        
+        border-width: 2px;
+    }
+
+    .trackBox
+    {        
+        justify-content: space-around;
+    }
+
+    .trackHolder
+    {
+        width: 85%;
+    }
+}
